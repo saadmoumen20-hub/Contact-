@@ -1,0 +1,6 @@
+{
+  "name": "Contact Book",
+  "description": "A modern, premium dark Contact Book web application built with metallic silver accents, dynamic search, persistent storage, and Python-inspired dictionary logic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
