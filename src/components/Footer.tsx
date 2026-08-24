@@ -18,11 +18,19 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="flex flex-col md:flex-row items-start justify-between gap-8 pb-12 border-b border-white/5">
           <div className="max-w-sm">
             <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-white/15 flex items-center justify-center text-slate-200">
-                <BookUser className="w-4 h-4" />
+              <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-900 border border-white/15 flex items-center justify-center">
+                <img
+                  src="/app-logo.png"
+                  alt="contact + logo"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://i.postimg.cc/L6wgJYpd/Chat-GPT-Image-24-aout-2026-18-37-42.png';
+                  }}
+                />
               </div>
-              <span className="text-base font-bold text-white tracking-tight">
-                Contact<span className="text-slate-400 font-light">Book</span>
+              <span className="text-base font-bold text-white tracking-tight flex items-center gap-0.5">
+                <span>contact</span>
+                <span className="text-emerald-400 font-semibold">+</span>
               </span>
             </div>
             <p className="text-zinc-500 leading-relaxed">
@@ -69,7 +77,7 @@ export const Footer: React.FC<FooterProps> = ({
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-500">
           <div className="flex items-center gap-2">
-            <span>Contact Book Application</span>
+            <span>Contact + Application</span>
             <span>&bull;</span>
             <span>All actions live-synced to local storage</span>
           </div>

@@ -27,15 +27,24 @@ export const Navbar: React.FC<NavbarProps> = ({
           id="nav-brand-btn"
           className="flex items-center gap-3 group text-left cursor-pointer focus:outline-none"
         >
-          <div className="relative w-10 h-10 rounded-xl bg-gradient-to-b from-zinc-800 to-zinc-950 border border-white/20 flex items-center justify-center shadow-lg group-hover:border-white/40 transition-colors">
-            {/* Metallic subtle inner glow */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-50 pointer-events-none" />
-            <BookUser className="w-5 h-5 text-slate-200 group-hover:text-white transition-colors" />
+          <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-b from-zinc-800 to-zinc-950 border border-white/20 flex items-center justify-center shadow-lg group-hover:border-white/40 transition-colors">
+            <img
+              src="/app-logo.png"
+              alt="contact + logo"
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.src.includes('postimg')) {
+                  target.src = 'https://i.postimg.cc/L6wgJYpd/Chat-GPT-Image-24-aout-2026-18-37-42.png';
+                }
+              }}
+            />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-bold tracking-tight text-lg text-white font-sans">
-                Contact<span className="text-slate-400 font-light">Book</span>
+              <span className="font-bold tracking-tight text-lg text-white font-sans flex items-center gap-0.5">
+                <span>contact</span>
+                <span className="text-emerald-400 font-semibold">+</span>
               </span>
               <span className="px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase rounded-full bg-white/10 text-slate-300 border border-white/15">
                 v2.0
